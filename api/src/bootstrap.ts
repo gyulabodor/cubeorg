@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import { API_PORT, CLIENT_URL } from "./config";
 import { baseRouter } from "./routers";
+import { dataSourceInit } from "./orm";
 
 
 const server = express();
@@ -11,4 +12,6 @@ server.use(cors({origin: CLIENT_URL, credentials: true}));
 server.use(baseRouter);
 server.listen(API_PORT, () => {
     console.log(`CubeOrg server started! PORT: ${API_PORT}`);
-})
+});
+
+dataSourceInit();
