@@ -11,11 +11,5 @@ export const datasource = new DataSource({
     database: DB,
     synchronize: true,
     logging: true,
-    entities: [
-        GameSession,
-        Game,
-        SessionDate,
-        Attendance,
-        Comment,
-        User]
+    entities: [Attendance,Comment,Game,GameSession,SessionDate,User]
 })
