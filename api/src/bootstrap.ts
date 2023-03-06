@@ -6,7 +6,6 @@ import { baseRouter } from "./routers";
 import { dataSourceInit } from "./orm";
 import { errorHandler } from "./middlewares/error-handler";
 
-
 const server = express();
 server.use(express.json());
 server.use(cors({origin: CLIENT_URL, credentials: true}));
