@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { eventRouter } from "./eventRouter";
+import { gameRouter } from "./game-router/game-router";
+import { gameSessionRouter } from "./game-session-router";
 
 export const baseRouter = Router();
 
-baseRouter.use("/events",eventRouter);
+baseRouter.use("/events",gameSessionRouter);
+baseRouter.use("/games",gameRouter);
